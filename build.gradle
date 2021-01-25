@@ -3,8 +3,12 @@ buildscript {
     ext.navigationVersion = '2.2.0-rc02'
     ext.ktlintVersion = '0.33.0'
     repositories {
-        google()
-        jcenter()
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+//        google()
+//        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
@@ -22,8 +26,12 @@ plugins {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+//        google()
+//        jcenter()
     }
     apply plugin: 'com.diffplug.gradle.spotless'
     spotless {
